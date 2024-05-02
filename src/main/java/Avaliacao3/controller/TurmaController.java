@@ -1,4 +1,4 @@
-package controller;   
+package Avaliacao3.controller;   
   
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entities.Turma;
-import service.TurmaService;   
+import Avaliacao3.entities.Turma;
+import Avaliacao3.service.TurmaService;   
   
 @RestController   
 @RequestMapping("/turma")   

@@ -1,4 +1,4 @@
-package controller;   
+package Avaliacao3.controller;   
   
 import java.util.List;
 
@@ -14,11 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entities.Aluno;
-import service.AlunoService;   
-  
-@RestController  
+import Avaliacao3.entities.Aluno;
+import Avaliacao3.service.AlunoService;   
 
+@RestController  
 @RequestMapping("/aluno")  
 public class AlunoController {   
 	private final AlunoService alunoService;   
@@ -64,6 +63,11 @@ public class AlunoController {
 	@GetMapping("/nome-completo/{nomeCompleto}")
 	public List<Aluno> findAlunosPorNomeCompletoLike(@PathVariable String nomeCompleto){
 		return alunoService.findByNomeCompletoLike(nomeCompleto);
+	}
+	//query
+	@GetMapping("/turma/{turmaId}")
+	public List<Aluno> findAlunosPorTurma(@PathVariable Long turmaId) {
+		return alunoService.findByTurmaId(turmaId);
 	}
 	
 	@PostMapping("/")   

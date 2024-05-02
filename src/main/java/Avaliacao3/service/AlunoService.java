@@ -1,4 +1,4 @@
-package service; 
+package Avaliacao3.service; 
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import entities.Aluno;
-import repository.AlunoRepository;   
+import Avaliacao3.entities.Aluno;
+import Avaliacao3.repository.AlunoRepository;   
 
 @Service   
 public class AlunoService {   
@@ -40,6 +40,10 @@ public class AlunoService {
 	}
 	public List<Aluno> buscarAlunosPorCidadeRenda(String cidade, double renda){
 		return alunoRepository.findByCidadeAndRenda(cidade, renda);
+	}
+	//query
+	public List<Aluno> findByTurmaId(Long turmaId) {
+		return alunoRepository.findByTurmaId(turmaId);
 	}
 	public Aluno salvaAluno(Aluno aluno) {     
 		return alunoRepository.save(aluno);     

@@ -1,5 +1,5 @@
 
-package entities;
+package Avaliacao3.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
